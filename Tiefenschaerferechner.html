@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tiefenschaerferechner</title>
+
+</head>
+<body>    
+    <header>
+        <div class = "container">
+            <img src="./src/img/meinLogo.svg" alt="logo">
+            <div id="headertext">
+                Hier wird ein <strong>schöner </strong>Banner die <em>optimale</em> Kamera zeigen
+            </div>
+    
+        </div>
+        <nav class="dropdown">
+             <ul>
+                <li class="dropdownlist">
+                    <button class="dropbtn">Hersteller</button>
+                    <div class="Hersteller">
+                        <a href="https://www.canon.de">Canon</a>
+                        <a href="https://gopro.com/de/de/GoPro">GoPro</a>
+                        <a href="https://www.hasselblad.com/">Hasselblad</a>
+                        <a href="https://leica-camera.com/de-DE">Leica</a>
+                        <a href="https://shop.lomography.com/de/">lomography</a>
+                        <a href="https://mamiya.uk/">Mamiya</a>
+                        <a href="https://www.minoltadigital.com/cameras">Minolta</a>
+                        <a href="https://www.nikon.de">Nikon</a>
+                        <a href="https://pentax.eu/de">Pentax</a>
+                        <a href="https://www.olympus.de/">Olympus</a>
+                        <a href="https://www.sony.de">Sony</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <div id="h2titel">
+            <h2>Tiefenschärferechner</h2>
+        </div>
+        <aside>
+            <ul id="sidebarlist">
+                <h4>Kamerahersteller</h4>
+                <li><a href="Tiefenschaerferechner.html">Tiefenschärferechner</a></li>
+                <li><a href="https://gopro.com/de/de/GoPro">GoPro</a></li>
+                <li><a href="https://www.hasselblad.com/">Hasselblad</a>  </li>
+                <li><a href="https://leica-camera.com/de-DE">Leica</a></li>
+                <li><a href="https://shop.lomography.com/de/">lomography</a></li>
+                <li><a href="https://mamiya.uk/">Mamiya</a></li>
+                <li><a href="https://www.minoltadigital.com/cameras">Minolta</a></li>
+                <li><a href="https://www.nikon.de">Nikon</a></li>
+                <li><a href="https://pentax.eu/de">Pentax</a></li>
+                <li><a href="https://www.olympus.de/">Olympus</a></li>
+                <li><a href="https://www.sony.de">Sony</a></li>
+            </ul>
+        </aside>
+
+        <div>
+            <p>Um die Tiefenschärfe zu berechnen benötige ich ein paar Informationen. 
+                Bitte fülle das Formular aus.
+            </p>
+            
+            <form action="#" method="POST">
+                <label for="kamera">Kamera:</label>
+                <input type="text" id="kamera" name="kamera" required><br><br>
+
+                <label for="objektiv">Objektiv:</label>
+                <input type="text" id="objektiv" name="objektiv" required><br><br>
+
+                <label for="brennweite">Brennweite (mm):</label>
+                <input type="number" id="brennweite" name="brennweite" step="1" min="1" required><br><br>
+
+                <label for="abstand">Abstand (m):</label>
+                <input type="number" id="abstand" name="abstand" step="0.01" min="0" required><br><br>
+
+                <button type="submit">Absenden</button>
+            </form>
+        
+        </div>
+        <hr></hr>
+    </main>
+    <footer>
+        copyright emu
+    </footer>
+</body>
+</html>
