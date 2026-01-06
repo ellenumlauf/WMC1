@@ -7,72 +7,181 @@
     <title>Zahlensystemkonverter</title>
 
 </head>
-<body>    
-    <header>
-        <div class = "headercontainer">
-            <a href="Aufgabe_HTML5tags_EllenUmlauf.html">
-                <img src="./src/img/meinLogo.svg" alt="logo">
-            </a>
-            <div id="headertext">
-                Hier wird ein <strong>schöner </strong>Banner die <em>optimale</em> Kamera zeigen
+<body>
+     <header>
+        <div class="headertopcontainer">
+            <div class="topbox">
+                <span>Informativ!</span>
             </div>
-    
+            <div class="topbox">
+                <span>New! New! New!</span>
+            </div>
+            <div class="topbox">
+                <span>Free of charge!</span>
+            </div>
         </div>
-        <nav class="dropdown">
-             <ul>
-                <li class="dropdownlist">
-                    <button class="dropbtn">Hersteller</button>
-                    <div class="Hersteller">
-                        <a href="https://www.canon.de">Canon</a>
-                        <a href="https://gopro.com/de/de/GoPro">GoPro</a>
-                        <a href="https://www.hasselblad.com/">Hasselblad</a>
-                        <a href="https://leica-camera.com/de-DE">Leica</a>
-                        <a href="https://shop.lomography.com/de/">lomography</a>
-                        <a href="https://mamiya.uk/">Mamiya</a>
-                        <a href="https://www.minoltadigital.com/cameras">Minolta</a>
-                        <a href="https://www.nikon.de">Nikon</a>
-                        <a href="https://pentax.eu/de">Pentax</a>
-                        <a href="https://www.olympus.de/">Olympus</a>
-                        <a href="https://www.sony.de">Sony</a>
-                    </div>
-                </li>
-            </ul>
 
-        </nav>
-    </header>
-    <main>
-        <!--<div id="h1titel">
-            <h1>ZahlensystemkonverterWunschfotoapparat</h1>
-            <strong> der leistbar ist</strong>
-        </div>
-        -->
-        <div class="maincontainer">
-            <aside>
-                <a href="Aufgabe_HTML5tags_EllenUmlauf.html">Back</a>
-                <ul id="sidebarlist">
-                    <li><a href="Tiefenschaerferechner.html">Tiefenschärferechner</a></li>
-                    <li><a href="Gallerie.html">Gallerie</a></li>
-                    <li><a href="Zahlensystemkonverter.html">Zahlenkonverter</a></li>
-                </ul>
-            </aside>
-            <div class="centralbox">
-                <div class="h2titel">
-                    <h2>Zahlensystemkonverter</h2>
+        <nav class="myNavbar">
+            <!-- LEFT ZONE -->
+             <div class="nav-left">
+                <div class="dropdown">
+                    <span>External</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.canon.de">Canon</a></li>
+                        <li><a href="https://gopro.com/de/de/GoPro">GoPro</a></li>
+                        <li><a href="https://www.hasselblad.com/">Hasselblad</a></li>
+                        <li><a href="https://leica-camera.com/de-DE">Leica</a></li>
+                        <li><a href="https://shop.lomography.com/de/">lomography</a></li>
+                        <li><a href="https://mamiya.uk/">Mamiya</a></li>
+                        <li><a href="https://www.minoltadigital.com/cameras">Minolta</a></li>
+                        <li><a href="https://www.nikon.de">Nikon</a></li>
+                        <li><a href="https://pentax.eu/de">Pentax</a></li>
+                        <li><a href="https://www.olympus.de/">Olympus</a></li>
+                        <li><a href="https://www.sony.de">Sony</a></li>
+                    </ul> 
+                </div>
+            </div>
+
+            <!-- LOGO CENTER -->
+            <div class="nav-logo">
+                <a href="Aufgabe_HTML5tags_EllenUmlauf.html">
+                    <img src="src/img/logoRagbagWOBackground.svg" 
+                    alt="Logo - Ragbag Start page"
+                    class="logoRagbag">
+                </a>
+            </div>
+
+            <!-- RIGHT ZONE -->
+            <div class="nav-zone nav-right">
+                <!-- Right zone left part-->
+                <div class="nav-internallinks">
+                    <div class="dropdown">
+                        <span>Explore</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="Zahlensystemkonverter.html">Number converter</a></li>
+                            <li><a href="Gallerie.html">Gallery</a></li>
+                            <li><a href="MeinWunschfotoapparat.html">my dream camera</a></li>
+                        </ul>
+                    </div>
+                    <div class ="dropdown">
+                        <span>Support</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="Impressum.html">Imprint</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <p>Da wir Zahlensysteme umrechnen können müssen und manche online-Seiten falsche
-                    ERgebnisse liefern oder Nachkommastellen verweigern soll hier ein Zahlensystemkonverter
-                    für das Binär-, Oktal-, Dezimal- und Hexadezimalsystem entstehen. Idealerweise gibt man
-                    jeweils nur die Basis ein und die Berechnung erfolgt. Dazu benötige ich allerdings Javascript.
-                </p>
-                <br>
-                
+                <!-- RIGHT Icons -->
+                <div class="nav-icons">
+                    <a href="Login.html" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+                        </svg>
+                    </a>
+                    <a href="Search.html" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <hr>
+
+            <!-- BURGER -->
+            <div class="burger" onclick="toggleMenu()">☰</div>
+        </nav>
+        
+        <!-- Mobile Dropdown Container-->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-item">External
+                <ul>
+                    <li><a href="https://www.canon.de">Canon</a></li>
+                    <li><a href="https://gopro.com/de/de/GoPro">GoPro</a></li>
+                    <li><a href="https://www.hasselblad.com/">Hasselblad</a></li>
+                    <li><a href="https://leica-camera.com/de-DE">Leica</a></li>
+                    <li><a href="https://shop.lomography.com/de/">lomography</a></li>
+                    <li><a href="https://mamiya.uk/">Mamiya</a></li>
+                    <li><a href="https://www.minoltadigital.com/cameras">Minolta</a></li>
+                    <li><a href="https://www.nikon.de">Nikon</a></li>
+                    <li><a href="https://pentax.eu/de">Pentax</a></li>
+                    <li><a href="https://www.olympus.de/">Olympus</a></li>
+                    <li><a href="https://www.sony.de">Sony</a></li>
+                </ul>
+            </div>
+            <div class="mobile-item">Explore
+                <ul>
+                    <li><a href="Zahlensystemkonverter.html">Number converter</a></li>
+                    <li><a href="Gallerie.html">Gallery</a></li>
+                    <li><a href="MeinWunschfotoapparat.html">dream camera</a></li>
+                </ul>
+            </div>
+            <div class="mobile-item">Support
+                <ul>
+                    <li><a href="Impressum.html">Imprint</a></li>
+                </ul>
+            </div>
+            <div class="mobile-item">
+                <a href="Login.html" class="icon">Login
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="mobile-item">
+                <a href="Search.html" class="icon">Search
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="centralboxConvert">
+            <section class="introPage">
+                <h2>Number Converter</h2>
+                <h3>Binary ↔ Decimal</h3>
+                <div class="convertText">
+                    <p>We have to know how to convert number systems. Since some online sites provide 
+                        incorrect results and/or do not support decimal places, I built my own number converter—
+                        at the moment, it only works for conversions between binary and decimal.
+                    </p>
+                </div>
+                <br>
+            </section>
+        </div>
+
+        <div>
+            <form class="converter-form" id="converterForm">
+
+                <!-- Auswahl binary / decimal -->
+                <div class="form-group">
+                    <label for="systemSelect">Input Type</label>
+                    <select id="systemSelect" required>
+                        <option value="" disabled selected>Select system</option>
+                        <option value="binary">Binary</option>
+                        <option value="decimal">Decimal</option>
+                    </select>
+                </div>
+
+                <!-- Eingabe der Zahl -->
+                <div class="form-group">
+                    <label for="numberInput">Number</label>
+                    <input type="text" id="numberInput" placeholder="e.g. 12.3 or 1101.1" required>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn">Submit</button>
+                    <button type="reset" id="resetBtn">Reset</button>
+                </div>
+            </form>
+
+            <div id="output"></div>
+
         </div>
     </main>
-    <footer class="footerbox">
-        copyright emu; 
-    </footer>
+    <script src="navbar.js"></script>
+    <script src="converter.js"></script>
 </body>
 </html>

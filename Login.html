@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>index</title>
-
+    <title>Login</title>
 </head>
 <body>    
-    <header>
+   <header>
         <div class="headertopcontainer">
             <div class="topbox">
                 <span>Informativ!</span>
@@ -135,34 +134,31 @@
             </div>
         </div>
     </header>
-
+    
     <main>
-        <div class="maincontainer">
-            <div class="mainLeftBox">
-                <div class="mainLeftBoxText">
-                    <section class="intro">
-                        <h1>Try it yourself</h1>
-                        <p>Convert binary numbers to</p>
-                        <p>decimal numbers and vice versa</p>
-                        <p class="dividingText">or</p>
-                        <p>Have a look at the gallery</p>
-                    </section>
-                </div>
-                <div class="button-group">
-                    <a href="Zahlensystemkonverter.html" class="btnlike">Converter</a>
-                    <a href="Gallerie.html" class="btnlike">Gallery</a>
-                </div>
-            </div>
-            <div class="image-wrapper">
-                <a>
-                    <img src="src/img/Startpage_theme.jpg">
-                    alt="Startpage image"
-                    class="startpageImage">
-                </a>
-            </div>
+        <div class="mainLogin">
+            <section class="introPage">
+                <h2>Login</h2>
+                <h3>Please enter your login details</h3>
+            </section>
         </div>
+        <form class="login-form" action="#" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn submit-btn">Submit</button>
+                <button type="button" class="btn create-btn">Create Account</button>
+            </div>
+        </form>
     </main>
-    <hr>
-    <script src="navbar.js"></script>
 </body>
+<script src="navbar.js"></script>
 </html>

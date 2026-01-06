@@ -4,103 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="gallerie.js"></script>
+    <!--<script src="gallerie.js"></script> -->
     <title>Gallerie</title>
 
 </head>
-<body>    
+<body id="top">
     <header>
-        <div class = "headercontainer">
-             <a href="Aufgabe_HTML5tags_EllenUmlauf.html">
-                <img src="./src/img/meinLogo.svg" alt="logo">
-            </a>
-            <div id="headertext">
-                Hier wird ein <strong>schöner </strong>Banner die <em>optimale</em> Kamera zeigen
+        <div class="headertopcontainer">
+            <div class="topbox">
+                <span>Informativ!</span>
             </div>
-    
+            <div class="topbox">
+                <span>New! New! New!</span>
+            </div>
+            <div class="topbox">
+                <span>Free of charge!</span>
+            </div>
         </div>
-        <nav class="dropdown">
-             <ul>
-                <li class="dropdownlist">
-                    <button class="dropbtn">Hersteller</button>
-                    <div class="Hersteller">
-                        <a href="https://www.canon.de">Canon</a>
-                        <a href="https://gopro.com/de/de/GoPro">GoPro</a>
-                        <a href="https://www.hasselblad.com/">Hasselblad</a>
-                        <a href="https://leica-camera.com/de-DE">Leica</a>
-                        <a href="https://shop.lomography.com/de/">lomography</a>
-                        <a href="https://mamiya.uk/">Mamiya</a>
-                        <a href="https://www.minoltadigital.com/cameras">Minolta</a>
-                        <a href="https://www.nikon.de">Nikon</a>
-                        <a href="https://pentax.eu/de">Pentax</a>
-                        <a href="https://www.olympus.de/">Olympus</a>
-                        <a href="https://www.sony.de">Sony</a>
+
+        <nav class="myNavbar">
+            <!-- LEFT ZONE -->
+             <div class="nav-left">
+                <div class="dropdown">
+                    <span>External</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.canon.de">Canon</a></li>
+                        <li><a href="https://gopro.com/de/de/GoPro">GoPro</a></li>
+                        <li><a href="https://www.hasselblad.com/">Hasselblad</a></li>
+                        <li><a href="https://leica-camera.com/de-DE">Leica</a></li>
+                        <li><a href="https://shop.lomography.com/de/">lomography</a></li>
+                        <li><a href="https://mamiya.uk/">Mamiya</a></li>
+                        <li><a href="https://www.minoltadigital.com/cameras">Minolta</a></li>
+                        <li><a href="https://www.nikon.de">Nikon</a></li>
+                        <li><a href="https://pentax.eu/de">Pentax</a></li>
+                        <li><a href="https://www.olympus.de/">Olympus</a></li>
+                        <li><a href="https://www.sony.de">Sony</a></li>
+                    </ul> 
+                </div>
+            </div>
+
+            <!-- LOGO CENTER -->
+            <div class="nav-logo">
+                <a href="Aufgabe_HTML5tags_EllenUmlauf.html">
+                    <img src="src/img/logoRagbagWOBackground.svg" 
+                    alt="Logo - Ragbag Start page"
+                    class="logoRagbag">
+                </a>
+            </div>
+
+            <!-- RIGHT ZONE -->
+            <div class="nav-zone nav-right">
+                <!-- Right zone left part-->
+                <div class="nav-internallinks">
+                    <div class="dropdown">
+                        <span>Explore</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="Zahlensystemkonverter.html">Number converter</a></li>
+                            <li><a href="Gallerie.html">Gallery</a></li>
+                            <li><a href="MeinWunschfotoapparat.html">my dream camera</a></li>
+                        </ul>
                     </div>
-                </li>
-            </ul>
-
-        </nav>
-    </header>
-    <main>
-        <div class="maincontainer">
-            <aside>
-                <a href="Aufgabe_HTML5tags_EllenUmlauf.html">Back</a>
-                <ul id="sidebarlist">
-                    <li><a href="Tiefenschaerferechner.html">Tiefenschärferechner</a></li>
-                    <li><a href="Gallerie.html">Gallerie</a></li>
-                    <li><a href="ZahlensystemKonverter.html">Zahlenkonverter</a></li>
-                </ul>
-            </aside>
-
-            <div class="centralbox">
-                <div class="h2titel">
-                    <h2>Gallerie</h2>
+                    <div class ="dropdown">
+                        <span>Support</span>
+                        <ul class="dropdown-menu">
+                            <li><a href="Impressum.html">Imprint</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <p>Ich bin ein Fan von Schwarz-Weiß Fotografie. Hier werden bald ein paar Fotos zu sehen sein. 
-                </p>
-                <br><br>
-                <div class="fotobox">
-                    <img class="gallerie" src="./src/img/Foto1.jpg" alt="Tiefenschärfe mit Klubbe">
-                    <!-- 6 images
-                    <div class="mySlides">
-                        <div class="numbertext">1 / 6</div>
-                        <img class="gallerie" src="./src/img/Foto1.jpg">
-                    </div>
+                <!-- RIGHT Icons -->
+                <div class="nav-icons">
+                    <a href="Login.html" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+                        </svg>
+                    </a>
+                    <a href="Search.html" class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                    <div class="mySlides">
-                        <div class="numbertext">2 / 6</div>
-                        <img class="gallerie" src="./src/img/Foto2.jpg">
-                    </div>
-                                        <div class="mySlides">
-                        <div class="numbertext">3 / 6</div>
-                        <img class="gallerie" src="./src/img/Foto3.jpg">
-                    </div>
+            <!-- BURGER -->
+            <div class="burger" onclick="toggleMenu()">☰</div>
+        </nav>
+        
+        <!-- Mobile Dropdown Container-->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-item">External
+                <ul>
+                    <li><a href="https://www.canon.de">Canon</a></li>
+                    <li><a href="https://gopro.com/de/de/GoPro">GoPro</a></li>
+                    <li><a href="https://www.hasselblad.com/">Hasselblad</a></li>
+                    <li><a href="https://leica-camera.com/de-DE">Leica</a></li>
+                    <li><a href="https://shop.lomography.com/de/">lomography</a></li>
+                    <li><a href="https://mamiya.uk/">Mamiya</a></li>
+                    <li><a href="https://www.minoltadigital.com/cameras">Minolta</a></li>
+                    <li><a href="https://www.nikon.de">Nikon</a></li>
+                    <li><a href="https://pentax.eu/de">Pentax</a></li>
+                    <li><a href="https://www.olympus.de/">Olympus</a></li>
+                    <li><a href="https://www.sony.de">Sony</a></li>
+                </ul>
+            </div>
+            <div class="mobile-item">Explore
+                <ul>
+                    <li><a href="Zahlensystemkonverter.html">Number converter</a></li>
+                    <li><a href="Gallerie.html">Gallery</a></li>
+                    <li><a href="MeinWunschfotoapparat.html">dream camera</a></li>
+                </ul>
+            </div>
+            <div class="mobile-item">Support
+                <ul>
+                    <li><a href="Impressum.html">Imprint</a></li>
+                </ul>
+            </div>
+            <div class="mobile-item">
+                <a href="Login.html" class="icon">Login
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="mobile-item">
+                <a href="Search.html" class="icon">Search
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="maincontainerGal">
+            <div class="maincentralGal">
+                <div class="centralboxGallery">
+                    <h2>Gallery</h2>
 
-                    <div class="mySlides">
-                        <div class="numbertext">4 / 6</div>
-                        <img class="gallerie" src="./src/img/Foto4.jpg">
-                    </div>
-                                        <div class="mySlides">
-                        <div class="numbertext">5 / 6</div>
-                        <img class="gallerie"  src="./src/img/Foto5.jpg">
-                    </div>
+                    <p>I am a fan of black-and-white photography.</p>
+                    <p>However, the true master of black-and-white photography was Ansel Adams!</p>
+                    <p>Scroll down and see for yourself.</p>
+                    <br><br>
+                    <div class="fotobox">
+                        <!-- 6 images -->
+                        <div class="mySlides">
+                            <img class="gallerie" src="./src/img/Foto1.jpg"  alt="Tiefenschärfe mit Klubbe">
+                        </div>
 
-                    <div class="mySlides">
-                        <div class="numbertext">6 / 6</div>
-                        <img class="gallerie" src="./src/img/Foto6.jpg">
+                        <div class="mySlides">
+                            <img class="gallerie" src="./src/img/Foto2.jpg">
+                        </div>
+                        <div class="mySlides">
+                            <img class="gallerie" src="./src/img/Foto3.jpg">
+                        </div>
+
+                        <div class="mySlides">
+                            <img class="gallerie" src="./src/img/Foto4.jpg">
+                        </div>
+                                            <div class="mySlides">
+                            <img class="gallerie"  src="./src/img/Foto5.jpg">
+                        </div>
+
+                        <div class="mySlides">
+                            <img class="gallerie" src="./src/img/Foto6.jpg">
+                        </div>
+                        <!-- Next and previous buttons unicode für Pfeile: &#10094 &#10095 -->
+                        <div class="arrows">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <div class="numbertext" id="numberText">1 / 6</div>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
                     </div>
-                    Next and previous buttons unicode für Pfeile: &#10094 &#10095
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                -->
+                </div>
+
+                <div class="aadamsgallery">
+                    <div class="introPageAA">
+                        <h2>Ansel Adams</h2>
+                        <h3>the master of black and white</h3>
+                        <p>He was born in 1902 in San Francisco and is especially known for his stunning
+                            black-and-white photographs of the national parks in the western United States.
+                            Together with his friend and fellow photographer Fred Archer, Adams developed his now
+                            legendary Zone System in the 1930s to control the exposure and tonal range of black-and-white films.
+                        </p>
+                        <p>These fotos were taken from Wikimedia Commons (commons.wikimedia.org)  Category:Photographs by Ansel Adams</p>
+        
+                    </div>
+                    <div class="aagrid">
+                        
+                        <!-- von Wikimedia Commons  (commons.wikimedia.org)  Category:Photographs by Ansel Adams-->
+                        <div class="aa-img">
+                            <!-- Grand Canon 79-AAF-3 "Grand Canyon National Park," panorama with rock formation in foreground.-->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Grand_Canyon_panorama_with_rock_formation_3.jpg/1280px-Grand_Canyon_panorama_with_rock_formation_3.jpg" alt="Foto 1 von Ansel Adams">
+                            <div class="caption">
+                                Grand Canon 79-AAF-3 "Grand Canyon National Park," panorama with rock formation in foreground.
+                            </div>
+                        </div>
+                        <div class="aa-img">
+                            <!-- Close in view, dark shadowed hills in foreground, mountains in background, "Long's Peak, Rocky Mountain National Park," Colorado., 1933 - 1942  -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Close_in_view%2C_dark_shadowed_hills_in_foreground%2C_mountains_in_background%2C_%22Long%27s_Peak%2C_Rocky_Mountain_National_Park%2C%22_-_NARA_-_519963.jpg/1140px-Close_in_view%2C_dark_shadowed_hills_in_foreground%2C_mountains_in_background%2C_%22Long%27s_Peak%2C_Rocky_Mountain_National_Park%2C%22_-_NARA_-_519963.jpg?20111030043917"  alt="Foto 2 von Ansel Adams">
+                            <div class="caption">
+                                Close in view, dark shadowed hills in foreground, mountains in background, "Long's Peak, Rocky Mountain National Park," Colorado., 1933 - 1942
+                            </div>
+                        </div>
+                        <div class="aa-img">
+                            <!-- Taken at dusk or dawn from various angles during eruption. "Old Faithful Geyser, Yellowstone National Park," Wyoming. (vertical orientation); From the series Ansel Adams Photographs of National Parks and Monuments, compiled 1941 - 1942 -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ansel_Adams_-_National_Archives_79-AA-T23.jpg/960px-Ansel_Adams_-_National_Archives_79-AA-T23.jpg" alt="Foto 2 von Ansel Adams">
+                            <div class="caption">
+                                Taken at dusk or dawn from various angles during eruption. "Old Faithful Geyser, Yellowstone National Park," Wyoming. (vertical orientation); From the series Ansel Adams Photographs of National Parks and Monuments, compiled 1941 - 1942
+                            </div>
+                        </div>
+                        <div class="aa-img">
+                            <!-- "Castle Geyser Cove, Yellowstone National Park," Wyoming; From the series Ansel Adams Photographs of National Parks and Monuments, compiled 1941 - 1942, documenting the period ca. 1933 - 1942. -->
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Ansel_Adams_-_National_Archives_79-AA-T02.jpg/1280px-Ansel_Adams_-_National_Archives_79-AA-T02.jpg" alt="Foto 4 von Ansel Adams">
+                            <div class="caption">
+                                "Castle Geyser Cove, Yellowstone National Park," Wyoming; From the series Ansel Adams Photographs of National Parks and Monuments, compiled 1941 - 1942, documenting the period ca. 1933 - 1942.
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#top" class="back-to-top">back to top</a>
                 </div>
             </div>
             <hr>
         </div>
     </main>
-    <footer class = "footerbox">
-        copyright emu
-    </footer>
+    <script src="navbar.js"></script>
+    <script src="gallerie.js"></script>
 </body>
 </html>
