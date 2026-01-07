@@ -421,7 +421,7 @@ input, select, select option, textarea, button {
 .maincontainerWish {
     background-color: #8CCFE3;
     display: flex;
-    /*height: calc(100vh - 2.5rem - 90px);*/
+    height: calc(100vh - 2.5rem - 90px);
     display: flex;
     justify-content: space-between;
 }
