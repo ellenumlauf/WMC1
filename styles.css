@@ -392,6 +392,12 @@ input, select, select option, textarea, button {
     align-items: center;
 }
 
+@media(max-width: 834px) {
+    .aagrid {
+    grid-template-columns: 1fr;
+    }
+}
+
 .aagrid div img {
     width: 35vw;
     max-height: 400px;
