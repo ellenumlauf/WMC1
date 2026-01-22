@@ -641,6 +641,29 @@ button#resetBtn:hover {
     font-size: 1.5rem;
 }
 
+/*neuneuenu*/
+.mobile-menu.active {
+    display: block;
+    position: absolute; 
+    top: 130px;            
+    left: 400px;
+    width: 160px;
+    padding: 15px;
+    background-color: var(--background-light);
+    z-index: 1000;        /* sicherstellen, dass es oben liegt */
+}
+/*neuneuenu*/
+.mobile-item ul {
+    display: none;        /* Standard versteckt */
+    list-style: none;
+    padding-left: 0;
+    padding-right: 20px;
+}
+/*neuneuenu*/
+.mobile-item.active ul {
+    display: block;       /* sichtbar, wenn .active */
+    padding: 10px;
+}
 
 
 /* === Mobile Version === */
