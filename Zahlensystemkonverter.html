@@ -44,7 +44,7 @@
 
             <!-- LOGO CENTER -->
             <div class="nav-logo">
-                <a href="Aufgabe_HTML5tags_EllenUmlauf.html">
+                <a href="index.html">
                     <img src="src/img/logoRagbagWOBackground.svg" 
                     alt="Logo - Ragbag Start page"
                     class="logoRagbag">
@@ -140,11 +140,9 @@
         <div class="centralboxConvert">
             <section class="introPage">
                 <h2>Number Converter</h2>
-                <h3>Binary ↔ Decimal</h3>
+                <h3>Binary ↔ Octal ↔ Decimal ↔ Hexadecimal</h3>
                 <div class="convertText">
-                    <p>We have to know how to convert number systems. Since some online sites provide 
-                        incorrect results and/or do not support decimal places, I built my own number converter—
-                        at the moment, it only works for conversions between binary and decimal.
+                    <p>Enter the required values for conversion.
                     </p>
                 </div>
                 <br>
@@ -156,11 +154,23 @@
 
                 <!-- Auswahl binary / decimal -->
                 <div class="form-group">
-                    <label for="systemSelect">Input Type</label>
-                    <select id="systemSelect" required>
-                        <option value="" disabled selected>Select system</option>
+                    <label for="systemSelectInput">Input Type</label>
+                    <select id="systemSelectInput" required>
+                        <option value="" disabled selected>Select input system</option>
                         <option value="binary">Binary</option>
+                        <option value="octal">Octal</option>
                         <option value="decimal">Decimal</option>
+                        <option value="hexadecimal">Hexadecimal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="systemSelectOutput">Output Type</label>
+                    <select id="systemSelectOutput" required>
+                        <option value="" disabled selected>Select output system</option>
+                        <option value="binary">Binary</option>
+                        <option value="octal">Octal</option>
+                        <option value="decimal">Decimal</option>
+                        <option value="hexadecimal">Hexadecimal</option>
                     </select>
                 </div>
 

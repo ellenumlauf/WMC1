@@ -86,6 +86,7 @@ input, select, select option, textarea, button {
 /* Links & Icons */
 .nav-left {
     justify-self: start;
+    gap: 48px;
 }
 .nav-internallinks {
     display: flex;
