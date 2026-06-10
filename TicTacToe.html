@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Login</title>
+    <title>TicTacToe</title>
+
 </head>
-<body>    
-   <header>
+<body>
+     <header>
         <div class="headertopcontainer">
             <div class="topbox">
                 <span>Informative!</span>
@@ -22,7 +23,7 @@
 
         <nav class="myNavbar">
             <!-- LEFT ZONE -->
-             <div class="nav-zone nav-left">
+            <div class="nav-zone nav-left">
                 <div class="dropdown">
                     <span>External</span>
                     <ul class="dropdown-menu">
@@ -39,6 +40,7 @@
                         <li><a href="https://www.sony.de">Sony</a></li>
                     </ul> 
                 </div>
+
                 <div class="dropdown">
                     <span>Children</span>
                     <ul class="dropdown-menu">
@@ -125,7 +127,7 @@
                     <li><a href="Impressum.html">Imprint</a></li>
                 </ul>
             </div>
-            <div class="mobile-item dropdown">
+            <div class="mobile-item">
                 <a href="Login.html" class="icon">Login
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                         <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
@@ -143,29 +145,67 @@
     </header>
     
     <main>
-        <div class="mainLogin">
+        <div class="centralboxConvert">
             <section class="introPage">
-                <h2>Login</h2>
-                <h3>Please enter your login details</h3>
+                <h2>TicTacToe</h2>
+                <div class="convertText">
+
+                </div>
+                <br>
             </section>
         </div>
-        <form class="login-form" action="#" method="post">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+        <!--fragt nach Namen-->
+        <div id="startscreen">
+            <form id="StartTicForm">
+                <input id="player1" placeholder="Player 1" required>
+                <input id="player2" placeholder="Player 2" required>
+                <button type="submit" id="startBtn">Start</button>
+            </form>
+        </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
 
-            <div class="form-actions">
-                <button type="submit" class="btn submit-btn">Submit</button>
-                <button type="button" class="btn create-btn">Create Account</button>
+        <div class = "centralbox">
+            <p class = "spielanzeige"> Das ist ein Platzhalter </p>
+            <div class = "spielfeld">
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
+                <button class = "feld"></button>
             </div>
-        </form>
+            <div class="overlay">
+                <p class="overlay-text"> Das ist ein Platzhalter</p>
+                <button class = "overlay-button1">Play again?</button>
+                <button class = "overlay-button2">Different Players?</button>
+                <div class = "table-buttons">
+                    <button class = "overlay-button3 tableBtn">Show Score</button>
+                    <button class = "overlay-button4 tableBtn">Delete Score</button>
+                </div>
+            </div>
+            <div id="scoreOverlay" class="scoreHide">
+                <div class="scoreBox">
+                    <h2 class="scoreBoxTitle">Stats</h2>
+                    <table id="scoreTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Player 1</th>
+                                <th>Player 2</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
     </main>
+    <script src="tic-tac-toe.js" defer></script> 
 </body>
-<script src="navbar.js"></script>
 </html>

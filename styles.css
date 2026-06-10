@@ -1,5 +1,6 @@
 :root {
     --background-dark: #081B21;
+    --background-dark-blue: #072c58;
     --background-light: #fffefc;
     --primary-color: #67BED9;
     --secondary-color: #D85727;
@@ -7,6 +8,15 @@
     --color-logo: #F2CC00;
     --primary-light-color:#BDE3EF;
     --secondary-dark-color: #AC4520;
+
+    --kreis-farbe: #fa4414;
+    --kreuz-farbe: #14fa95;
+    --mittelblau-farbe: #04b1c8; /* #15E0FA bisher für Überschrift, Striche, "Nochmal Spielen" und glow des Buttons
+    ab jetzt nicht mehr für Nochmal Spielen und nicht mehr für glow */
+    --hellblau-farbe: #9bf2fd;  /*#01161b*/
+    --dunkelblau-farbe: #036f7d;
+    --field-color: #2684A6;
+    --background-tictactoe: #1A5979;
 }
 
 @font-face {
@@ -217,18 +227,48 @@ input, select, select option, textarea, button {
 }
 
 .image-wrapper {
-  width: clamp(300px, calc(100vw - 6.5rem - 90px), 800px);
-  height: clamp(240px, calc(100vh - 12.5rem - 90px), 600px);
-  margin: 5rem 2rem;
-  border-radius: 24px;
-  overflow: hidden; /* extrem wichtig */
+    /* neu*/
+    position: relative;
+    display: inline-block;
+    /*bis hierher neu */
+    width: clamp(300px, calc(100vw - 6.5rem - 90px), 800px);
+    height: clamp(240px, calc(100vh - 12.5rem - 90px), 600px);
+    margin: 5rem 2rem;
+    border-radius: 24px;
+    overflow: hidden; /* extrem wichtig */
 }
 
 .image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    /* neu*/
+    display: block;
+    /*bis hierher neu */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+/* Chuck Norris joke in the foto */
+#chuck-window {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    white-space: pre-line;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    background: var(--background-dark-blue);
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: var(--primary-light-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+
 .button-group {
     margin-top: 1rem;
 }
@@ -278,6 +318,8 @@ input, select, select option, textarea, button {
     background-color: var(--tertiary-color);
     margin-bottom: 3rem;
 }
+
+
 
 /* === Gallery === */
 .maincontainerGal {
@@ -405,9 +447,14 @@ input, select, select option, textarea, button {
     object-fit: contain;
 }
 
-.aa-img {
+.aa-imgframe {
     margin: 2rem 0 2rem 0;
 }
+
+.aa-img {
+    border: 2px solid white;
+}
+
 
 .caption {
     margin: 1rem auto 0 auto;
@@ -664,6 +711,337 @@ button#resetBtn:hover {
 .mobile-item.active ul {
     display: block;       /* sichtbar, wenn .active */
     padding: 10px;
+}
+
+
+/* === drawing.html === */
+
+#draw_container {
+    display: flex;
+    flex-direction: row;
+}
+
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 140px;
+    background-color: var(--primary-color);
+}
+.tool {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+#drawing-boarddiv {
+    display: flex;
+}
+
+#drawing-board {
+    border: 3px;
+    border-style: solid;
+    border-color: var(--primary-color); 
+}
+
+#toolbar #lineWidth {
+    width: 80%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'YsabeauInfant';
+    margin: 0 auto;
+}
+
+/*   ===== TicTacToe =====  */
+#startscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: 95vw;
+    height: 65vh;
+    background: rgb(26 89 121 / 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1.2rem solid var(--secondary-color);
+    border: 2rem;
+    gap: 10px;
+    z-index: 1000;
+}
+
+button#startBtn {
+    background-color: var(--color-logo);
+    margin: 0 auto;
+    padding: 0.6rem 1.4rem;
+    font-size: 2rem;
+    display: block;
+}
+
+#startscreen input
+{
+    display: flex;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem auto;
+    width: 35%;
+    border-radius: 10px;
+    border: 2px solid var(--background-light);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.centralbox {
+    height: calc(100vh - 230px);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-tictactoe);
+}
+
+.spielanzeige {
+    font-size: clamp(2rem, 2rem, 2rem);
+    font-weight: 900;
+    text-align: center;
+}
+.spielfeld {
+    width: 600px;
+    aspect-ratio: 1;
+    max-width: 50vh;
+    max-height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feld {
+    background-color: var(--primary-color);
+    border: 0.2rem solid var(--primary-light-color);
+    display: flex;
+    aspect-ratio: 1;
+    max-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.feld:nth-child(-n + 3) {
+    border-top: none;
+}
+.feld:nth-child(3n + 3) {
+    border-right: none;
+}
+.feld:nth-child(3n + 1) {
+    border-left: none;
+}
+.feld:nth-child(n + 7) {
+    border-bottom: none;
+}
+
+.feld::before, .feld::after {
+    content: "";   /* "" wollen keinen Text eingeben */
+    box-sizing: border-box;
+}
+
+.feld.kreis::before,
+.spielanzeige.kreis ~ .spielfeld .feld:not([disabled]):hover::before {
+    border: 1rem solid var(--kreis-farbe);
+    border-radius: 50%;  /* damit wird es ein kreis */
+    width: 85%;
+    aspect-ratio: 1;
+}
+/* kreuz besteht aus 2 schmalen, übereinanderliegenden Strichen, die um je 45Grad gegeneinander gedreht sind
+benötigen dafür 2 Pseudoelemente before und after */
+.feld.kreuz::before,
+.spielanzeige.kreuz ~ .spielfeld .feld:not([disabled]):hover::before,
+.feld.kreuz::after,
+.spielanzeige.kreuz ~ .spielfeld .feld:not([disabled]):hover::after {
+    background-color: var(--kreuz-farbe);
+    width: 1rem;
+    height: 100%;
+}
+
+/* hier ist wichtig dass translateX und rotate in EINEM transform angewandt werden, sonst wird
+nicht im Zentrum des Striches gedreht */
+.feld.kreuz::before,
+.spielanzeige.kreuz ~ .spielfeld .feld:not([disabled]):hover::before {
+    transform: translateX(50%) rotate(45deg); /* oder 50% bezieht sich auf die Breite des Elements; before ist das linke El. */
+}
+
+.feld.kreuz::after,
+.spielanzeige.kreuz ~ .spielfeld .feld:not([disabled]):hover::after {
+    transform: translateX(-50%) rotate(-45deg);/* after ist das rechte Element, ,it -0.5rem nach links geschoben */
+}
+
+.spielanzeige.kreis,
+.overlay-text.kreis {
+    color: var(--kreis-farbe);
+}
+
+.spielanzeige.kreuz,
+.overlay-text.kreuz {
+    color: var(--kreuz-farbe);
+    overlay: 1;
+}
+
+.feld:not([disabled]) {
+    cursor: pointer;
+}
+
+/* damit der potentielle Kreis fürs hovern sehr durchsichtig wird: opacity von 0.3 */
+.spielanzeige.kreis ~ .spielfeld .feld:not([disabled]):hover::before {
+    opacity: 0.3;
+}
+
+/* damit das potentielle Kreuz fürs hovern sehr durchsichtig wird: opacity von 0.3 */
+.spielanzeige.kreuz ~ .spielfeld .feld:not([disabled]):hover::before,
+.spielanzeige.kreuz ~ .spielfeld .feld:not([disabled]):hover::after {
+    opacity: 0.3;
+}
+
+.overlay {
+    background-color: var(--background-tictactoe);
+    position: absolute;
+    left: 20vw;
+    height: 60%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 900;
+}
+
+.overlay-text {
+    font-size: clamp(3vmin, 4vmin, 6vmin);
+    text-align: center;
+    margin: 1rem;
+    width: 25%;
+}
+
+.overlay-button1, .overlay-button2 {
+    font-size: clamp(3vmin, 4vmin, 5vmin);
+    background-color: var(--primary-color);
+    padding: 0.2rem;
+    margin: 1rem;
+    border: none;
+    width: 25%;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    opacity:1;
+}
+
+.table-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 25%;
+    padding: 0.2rem;
+    margin: 1rem;
+}
+
+.overlay-button3, .overlay-button4 {
+    font-size: clamp(2vmin, 3vmin, 4vmin);
+    background-color: var(--primary-light-color);
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    opacity:1;
+}
+
+.overlay-button1:hover, .overlay-button2:hover, .overlay-button3:hover, .overlay-button4:hover {
+    background-color: var(--tertiary-color);
+}
+
+/* macht den overlay sichtbar, für Ende des Spiels anzeige und spiel nochmal button ; opacity auf 1 damit sichtbar; soll auf alle pointer events
+reagieren; transition: macht Einblendung des overlays über einen Zeitraum von 1.5 sek*/
+.overlay.sichtbar {
+    background-color: rgb(26 89 121 / 40%);
+    pointer-events: all;
+    transition: opacity 1.5s;
+    opacity: 1;
+}
+
+.spielanzeige.unsichtbar {
+    opacity: 0;
+}
+.feld.gewinnerKlasse {
+    animation: gewinnerfeld_blinken 0.5s alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gewinnerfeld_blinken {
+    from {background-color: #dff6f8;}
+    to {background-color: var(--primary-color);}
+}
+
+.table {
+    background-color: var(--background-tictactoe);
+    position: absolute;
+
+    left: 5vw;
+    height: 60%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 900;
+}
+
+#scoreTable th,
+#scoreTable td {
+    border: 2px solid var(--background-tictactoe);
+}
+#scoreTable {
+    border: 2px solid var(--background-tictactoe);
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: var( --background-dark);
+}
+#scoreTable td {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.scoreBox {
+    background: rgb(189 227 239/80%);
+    position: absolute;
+    color: var(--background-dark);
+    top: 35vh;
+    left: 2vw;
+    height: 60%;
+    width: 30%;
+    padding: 0.25rem;
+    border-radius: 12px;
+    z-index:2000;
+}
+
+.scoreBoxTitle {
+    text-align: center;
+}
+.unsichtbar {
+    display: none;
 }
 
 

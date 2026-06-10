@@ -6,9 +6,7 @@ const form = document.getElementById("converterForm");
 const systemSelect = document.getElementById("systemSelect");
 const numberInput = document.getElementById("numberInput");
 const output = document.getElementById("output");
-//CHECK DIESE 4 CONST!!!
-// Hilfsfunktion: convert Decimal to base 2, 8, or 16; Binary, Octal or Hexadecimal number
-// baseType is String, defines which conversion
+
 function decimalToBase(decimalStr, baseType) {
     const num = parseFloat(decimalStr);
     if (isNaN(num)) {
@@ -60,36 +58,7 @@ function decimalToBase(decimalStr, baseType) {
     console.log(convertedInt);
     return `${convertedInt}.${convertedFrac}`;
 }
-/*
-// Hilfsfunktion: Dezimal -> Binär
-function decimalToBinary(decimalStr) {
-    const num = parseFloat(decimalStr);
-    if (isNaN(num)) return "Invalid decimal number";
 
-    const integerPart = Math.floor(num);
-    let fractionalPart = num - integerPart;
-
-    let binaryInt = integerPart.toString(2);
-
-    if (fractionalPart === 0) return binaryInt;
-
-    let binaryFrac = '';
-    let count = 0;
-    while (fractionalPart > 0 && count < 16) { // max 16 Nachkommastellen
-        fractionalPart *= 2;
-        if (fractionalPart >= 1) {
-            binaryFrac += '1';
-            fractionalPart -= 1;
-        } else {
-            binaryFrac += '0';
-        }
-        count++;
-    }
-
-    return `${binaryInt}.${binaryFrac}`;
-}
-*/
-// Hilfsfunktion: other -> Dezimal
 function otherToDecimal(numberStr, baseType) {
     let [intPart="", fracPart = ""]= "";
     let base = 1;
@@ -97,27 +66,22 @@ function otherToDecimal(numberStr, baseType) {
         if (!/^[01234567]+(\.[01234567]+)?$/.test(numberStr)) return "Invalid octal number";
         [intPart, fracPart = ""] = numberStr.split(".");
         base = 8;
-        //const integer = parseInt(intPart, 8);
     }
     else if (baseType === "binary"){
         if (!/^[01]+(\.[01]+)?$/.test(numberStr)) return "Invalid binary number";
         [intPart, fracPart = ""] = numberStr.split(".");
         base = 2;
-        //const integer = parseInt(intPart, 2);
     }
     else if (baseType === "hexadecimal"){
-        if ((!/^[0123456789ABCDEF]+(\.[0123456789ABCDEF]+)?$/.test(numberStr)) || (!/^[0123456789abcdef]+(\.[0123456789abcdef]+)?$/.test(octalStr))) return "Invalid binary number";
+        if ((!/^[0123456789ABCDEF]+(\.[0123456789ABCDEF]+)?$/.test(numberStr)) || (!/^[0123456789abcdef]+(\.[0123456789abcdef]+)?$/.test(numberStr))) return "Invalid binary number";
         [intPart, fracPart = ""] = numberStr.split(".");
         base = 16;
     }
-    console.log(intPart);
     const integer = parseInt(intPart, base);
-    console.log(integer);
     let fraction = 0;
     for (let i = 0; i < fracPart.length; i++) {
         fraction += parseInt(fracPart[i], 10) / Math.pow(base, i + 1);
     }
-
     return integer + fraction;
 }
 
@@ -155,9 +119,9 @@ form.addEventListener("submit", function(e) {
     e.preventDefault(); // Formular nicht abschicken
 
     // Variablen speichern
-    const selectedSystemInput = systemSelectInput.value; // "binary", "octal", "decimal" or "hexadecimal"
-    const selectedSystemOutput = systemSelectOutput.value; // as input
-    const inputNumber = numberInput.value.trim(); // Text der Zahl
+    const selectedSystemInput = systemSelectInput.value;
+    const selectedSystemOutput = systemSelectOutput.value;
+    const inputNumber = numberInput.value.trim();
 
     // Umrechnungsfunktion wird aufgerufen
     let result;
@@ -170,6 +134,7 @@ form.addEventListener("submit", function(e) {
     } else if (selectedSystemInput !== "decimal" && selectedSystemOutput !== "decimal") {
         result1 = otherToDecimal(inputNumber, selectedSystemInput);
         result = decimalToBase(result1, selectedSystemOutput);
+        output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result}`;
     } else {
         output.textContent = "Please select a valid input type";
     }
