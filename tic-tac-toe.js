@@ -12,38 +12,6 @@ let spielerKreuz;
 let spielerKreis;
 let spielNr = 1;
 
-function zeigeStartscreen() {
-
-    setStatsVisible(false);
-
-    document.getElementById("player1").value = "";
-    document.getElementById("player2").value = "";
-
-    document.getElementById("startscreen").style.display = "flex";
-}
-
-function starteSpiel() {
-
-
-    document.getElementById("startscreen").style.display = "flex";
-
-    spielerKreuz = document.getElementById("player1").value.trim();
-    spielerKreis = document.getElementById("player2").value.trim();
-
-    if (!spielerKreuz) spielerKreuz = "Spieler 1";
-    if (!spielerKreis) spielerKreis = "Spieler 2";
-
-    document.getElementById("startscreen").style.display = "none";
-
-    spielStarten();
-}
-
-startForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    starteSpiel();
-});
-
-
 /* markiert die drei felder in einer Reihe, die gewonnen haben*/
 const GEWINNER_KLASSE = "gewinnerKlasse";
 
@@ -53,8 +21,8 @@ const OVERLAY_BUTTON1_KLASSE = "overlay-button1";
 const OVERLAY_BUTTON2_KLASSE = "overlay-button2";
 const OVERLAY_BUTTON3_KLASSE = "overlay-button3";
 const OVERLAY_BUTTON4_KLASSE = "overlay-button4";
-const SICHTBAR_KLASSE = "sichtbar";
 
+const SICHTBAR_KLASSE = "sichtbar";
 const UNSICHTBAR_KLASSE = "unsichtbar";
 
 /* wählt das erste Element aus, das gefunden wird */
@@ -100,7 +68,38 @@ overlayButton4.addEventListener("click", function () {
 });
 
 
-spielStarten();
+
+setStatsVisible(false);
+startForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    starteSpiel();
+});
+
+
+function zeigeStartscreen() {
+
+    setStatsVisible(false);
+
+    document.getElementById("player1").value = "";
+    document.getElementById("player2").value = "";
+
+    document.getElementById("startscreen").style.display = "flex";
+}
+
+function starteSpiel() {
+    setStatsVisible(false);
+    document.getElementById("startscreen").style.display = "flex";
+
+    spielerKreuz = document.getElementById("player1").value.trim();
+    spielerKreis = document.getElementById("player2").value.trim();
+
+    if (!spielerKreuz) spielerKreuz = "Spieler 1";
+    if (!spielerKreis) spielerKreis = "Spieler 2";
+
+    document.getElementById("startscreen").style.display = "none";
+
+    spielStarten();
+}
 
 function setStatsVisible(visible) {
     scoreOverlay.classList.toggle("unsichtbar", !visible);
@@ -217,7 +216,7 @@ function spielBeenden(unentschieden) {
     }
   
     overlay.classList.add(SICHTBAR_KLASSE);
-    spielanzeige.classList.add(UNSICHTBAR_KLASSE);  // will die Anzeige am Schluss des Spiels verschwinden lassen
+    spielanzeige.classList.add(UNSICHTBAR_KLASSE);
 
     setStatsVisible(true);
 }
