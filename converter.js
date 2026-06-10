@@ -85,35 +85,6 @@ function otherToDecimal(numberStr, baseType) {
     return integer + fraction;
 }
 
-// Hilfsfunktion: Octal -> Dezimal
-function octalToDecimal(octalStr) {
-    if (!/^[01234567]+(\.[01234567]+)?$/.test(octalStr)) return "Invalid octal number";
-
-    const [intPart, fracPart = ""] = octalStr.split(".");
-    const integer = parseInt(intPart, 8);
-
-    let fraction = 0;
-    for (let i = 0; i < fracPart.length; i++) {
-        fraction += parseInt(fracPart[i], 10) / Math.pow(8, i + 1);
-    }
-
-    return integer + fraction;
-}
-
-function HexadecimalToDecimal(hexadecimalStr, targetOutput) {
-    if ((!/^[0123456789ABCDEF]+(\.[0123456789ABCDEF]+)?$/.test(octalStr)) || (!/^[0123456789abcdef]+(\.[0123456789abcdef]+)?$/.test(octalStr))) return "Invalid octal number";
-
-    const [intPart, fracPart = ""] = hexadecimalStr.split(".");
-    const integer = parseInt(intPart, 16);
-
-    let fraction = 0;
-    for (let i = 0; i < fracPart.length; i++) {
-        fraction += parseInt(fracPart[i], 10) / Math.pow(16, i + 1);
-    }
-
-    return integer + fraction;
-}
-
 // Event Listener für Submit
 form.addEventListener("submit", function(e) {
     e.preventDefault(); // Formular nicht abschicken

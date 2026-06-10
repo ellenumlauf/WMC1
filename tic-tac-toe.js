@@ -85,11 +85,6 @@ let aktuelleKlasse;
 overlayButton1.addEventListener("click", spielStarten);
 overlayButton2.addEventListener("click", zeigeStartscreen);
 
-function setStatsVisible(visible) {
-    scoreOverlay.classList.toggle("unsichtbar", !visible);
-    overlayButton3.innerText = visible ? "Hide Stats" : "Show Stats";
-};
-
 overlayButton3.addEventListener("click", function () {
     setStatsVisible(scoreOverlay.classList.contains("unsichtbar"));
 });
@@ -103,6 +98,10 @@ overlayButton4.addEventListener("click", function () {
 
 spielStarten();
 
+function setStatsVisible(visible) {
+    scoreOverlay.classList.toggle("unsichtbar", !visible);
+    overlayButton3.innerText = visible ? "Hide Stats" : "Show Stats";
+};
 
 function spielStarten() {
 
