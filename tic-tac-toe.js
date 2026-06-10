@@ -13,6 +13,9 @@ let spielerKreis;
 let spielNr = 1;
 
 function zeigeStartscreen() {
+
+    setStatsVisible(false);
+
     document.getElementById("player1").value = "";
     document.getElementById("player2").value = "";
 
@@ -20,6 +23,7 @@ function zeigeStartscreen() {
 }
 
 function starteSpiel() {
+
 
     document.getElementById("startscreen").style.display = "flex";
 

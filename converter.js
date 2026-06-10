@@ -73,7 +73,7 @@ function otherToDecimal(numberStr, baseType) {
         base = 2;
     }
     else if (baseType === "hexadecimal"){
-        if ((!/^[0123456789ABCDEF]+(\.[0123456789ABCDEF]+)?$/.test(numberStr)) || (!/^[0123456789abcdef]+(\.[0123456789abcdef]+)?$/.test(numberStr))) return "Invalid binary number";
+        if ((!/^[0123456789ABCDEF]+(\.[0123456789ABCDEF]+)?$/.test(numberStr)) || (!/^[0123456789abcdef]+(\.[0123456789abcdef]+)?$/.test(numberStr))) return "Invalid hexadecimal number";
         [intPart, fracPart = ""] = numberStr.split(".");
         base = 16;
     }
@@ -104,12 +104,20 @@ form.addEventListener("submit", function(e) {
         output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result}`;
     } else if (selectedSystemInput !== "decimal" && selectedSystemOutput !== "decimal") {
         result1 = otherToDecimal(inputNumber, selectedSystemInput);
-        result = decimalToBase(result1, selectedSystemOutput);
-        output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result}`;
+        console.log(result1);
+        console.log(typeof result1);
+        if(typeof result1 === "string") {
+            output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result1}`;
+        } else {
+            let test = String(result1);
+            console.log(typeof test);
+            result = decimalToBase(String(result1), selectedSystemOutput);
+            output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result}`;
+        }
     } else {
         output.textContent = "Please select a valid input type";
     }
-    output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result}`;
+    /*output.textContent =  `${selectedSystemInput} → ${selectedSystemOutput}: ${result}`;*/
 });
 
 // Reset: Ausgabe leeren
